@@ -12,7 +12,7 @@ const Footer = () => {
     <Nav className="me-auto">
       <Nav.Link href="#produto"></Nav.Link>
       <Nav.Link href="#sobrenos"></Nav.Link>
-      <Nav.Link href="#carrinho"></Nav.Link>
+      <Nav.Link href="#carrinho">Siga as nossas redes sociais </Nav.Link>
     </Nav>
     </Container>
   </Navbar>
