@@ -1,6 +1,8 @@
 import React from "react";
-import { Container, Navbar ,Nav} from 'react-bootstrap';
+import { Container, Navbar ,Nav} from 'react-bootstrap'
+import { useStateValue } from "../../StateProvider";
 const Header = () => {
+  const [{ basket }] = useStateValue();
   return (
     <>
   <Navbar bg="dark" variant="dark">
@@ -11,6 +13,8 @@ const Header = () => {
       <Nav.Link href="#produto">Produto</Nav.Link>
       <Nav.Link href="#sobrenos">Sobre Nós</Nav.Link>
       <Nav.Link href="#carrinho">Carrinho</Nav.Link>
+    
+           
     </Nav>
     </Container>
   </Navbar>

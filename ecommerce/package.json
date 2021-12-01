@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@mui/material": "^5.2.2",
     "aos": "^2.3.4",
     "formik": "^2.2.9",
     "helmet": "^4.6.0",

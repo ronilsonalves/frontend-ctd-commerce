@@ -1,127 +1,104 @@
 import React from "react";
-import {Carousel,Container,Navbar,Row,Card,Col} from 'react-bootstrap';
-import './Home.scss';
+import "./Home.scss";
+import Product from "../Produtos/Produtos";
+import Carousel from "react-bootstrap/Carousel";
+
+function Home() {
+  return (
+    <div className="home">
+      <div className="home__container">
+        <div className="home__image">
+          <Carousel>
+            <Carousel.Item>
+              <img
+                className="d-flex flex-row bd-highlight mb-3 home__image"
+                src="https://images-eu.ssl-images-amazon.com/images/G/31/AmazonVideo/2021/X-site/Multititle/jan/Blockbuster_entertainment/EN/1500x600_Hero-Tall_01_FT._CB662389308_.jpg"
+                alt="slide1"
+              />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className="d-flex flex-row bd-highlight mb-3 home__image"
+                src="https://images-eu.ssl-images-amazon.com/images/G/31/VG-2019Dec/Desktop_Tallhero_1500-X-600-BB-jan-rvised-NO-Cashback._CB411961897_.jpg"
+                alt="slide2"
+              />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className="d-flex flex-row bd-highlight mb-3 home__image"
+                src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/Audio/Boat/Boat_Gw_1500x600._CB660810557_.jpg"
+                alt="slide3"
+              />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className="d-flex flex-row bd-highlight mb-3 home__image"
+                src="https://images-eu.ssl-images-amazon.com/images/G/31/img2020/fashion/CAT_ATF/2._CB411390334_.jpg"
+                alt="slide4"
+              />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className="d-flex flex-row bd-highlight mb-3 home__image"
+                src="https://images-eu.ssl-images-amazon.com/images/G/31/img20/TVs/BAU/catlevel/D20458164_IN_HETV_Category_level_GW_PC_Tollhero_1500x600_en_1._CB660812078_.jpg"
+                alt="slide5"
+              />
+            </Carousel.Item>
+          </Carousel>
+        </div>
+        <div className="home__row">
+          <Product
+            id="12321341"
+            title="HP 14 8th Gen Intel Core i5 Processor 14-inch Thin and Light Laptop , 14q cs0017TU"
+            price={759.99}
+            image="https://images-na.ssl-images-amazon.com/images/I/71Qz7rl%2B5RL._SL1500_.jpg"
+            rating={4}
+          />
+          <Product
+            id="12321351"
+            title="OPPO A12 (Blue, 3GB RAM, 32GB Storage) With No Cost EMI/Additional"
+            price={34.99}
+            image="https://images-na.ssl-images-amazon.com/images/I/71bp9IpcK-L._SX522_.jpg"
+            rating={5}
+          />
+          <Product
+            id="12321361"
+            title="TCL 108 cm (43 inches) 4K Ultra HD Certified Android Smart LED TV 43P615 "
+            price={1094.98}
+            rating={4}
+            image="https://images-na.ssl-images-amazon.com/images/I/71vw4dDvP4L._SL1500_.jpg"
+          />
+        </div>
+
+        <div className="home__row">
+          <Product
+            id="12321381"
+            title="Casio Edifice Analog Blue Dial Men's Watch - EFR-552GL-2AVUDF (EX358)"
+            price={40.0}
+            rating={3}
+            image="https://images-na.ssl-images-amazon.com/images/I/71girhyQcJL._UL1100_.jpg"
+          />
+          <Product
+            id="12321371"
+            title="XBOOM Go PL5 Portable Bluetooth Speaker with Meridian Audio Technology"
+            price={25.99}
+            image="https://www.lg.com/us/images/home-audio/md07500093/gallery/desktop-01.jpg"
+            rating={5}
+          />
+          <Product
+            id="12321391"
+            title="Sketchfab Extra bass Headphones Over The Ear Headset with Deep bass (Red)"
+            price={58.99}
+            rating={4}
+            image="https://images-na.ssl-images-amazon.com/images/I/41rBUEf16jL.jpg"
+          />
+        </div>
 
 
-
-const Home = () => {
-    return (
-      <>
-
-<Carousel>
-
-  <Carousel.Item className="d-flex flex-row w-50 "> 
-    <img
-      className="d-flex flex-row w-50 "
-      src="https://res.cloudinary.com/dac23jyqr/image/upload/v1638384699/ecommerce/alexa_iz2qdk.jpg"
-      alt="Second slide"
-    />
-    <img
-      className="d-flex flex-row w-50 "
-      src="https://res.cloudinary.com/dac23jyqr/image/upload/v1638384699/ecommerce/kindle_qracmo.jpg"
-      alt="Second slide"
-    />
-    <img
-      className="d-flex flex-row w-50 "
-      src="https://res.cloudinary.com/dac23jyqr/image/upload/v1638384699/ecommerce/kindle_qracmo.jpg"
-      alt="Second slide"
-    />
-    <Carousel.Caption>
-      <h3>Second slide label</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </Carousel.Caption>
-  </Carousel.Item>
-  <Carousel.Item className="d-flex flex-row w-50"> 
-    <img
-      className="d-flex flex-row w-50"
-      src="https://res.cloudinary.com/dac23jyqr/image/upload/v1638385118/ecommerce/geladeira_lzg5vm.jpg"
-      alt="Second slide"
-    />
-    <img
-      className="d-flex flex-row w-50"
-      src="https://res.cloudinary.com/dac23jyqr/image/upload/v1638385106/ecommerce/liquidificador_nujfud.jpg"
-      alt="Second slide"
-    />
-    <img
-      className="d-flex flex-row w-50"
-      src="https://res.cloudinary.com/dac23jyqr/image/upload/v1638385106/ecommerce/microondas_cl5fdf.jpg"
-      alt="Second slide"
-    />
-
-    <Carousel.Caption>
-      <h3>Third slide label</h3>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-    </Carousel.Caption>
-  </Carousel.Item>
-</Carousel>
-
-<br></br>
-<Container>
-  <Navbar expand="lg" variant="light" bg="light">
-    <Container>
-      <Navbar.Brand href="#">Pagamento Rápido e Seguro</Navbar.Brand>
-    </Container>
-  </Navbar>
-</Container>
-<br></br>
-<Container>
-  <Navbar expand="lg" variant="light" bg="light">
-    <Container>
-      <Navbar.Brand href="#">Compre por Categoria</Navbar.Brand>
-    </Container>
-  </Navbar>
-</Container>
-<br></br>
-
-
-<Row xs={1} md={2} className="g-4">
-  {Array.from({ length: 2 }).map((_, idx) => (
-    <Col>
-      <Card>
-        <Card.Img variant="top" src="holder.js/100px160" />
-        <Card.Body>
-          <Card.Title>Card title</Card.Title>
-          <Card.Text>
-            This is a longer card with supporting text below as a natural
-            lead-in to additional content. This content is a little bit longer.
-          </Card.Text>
-        </Card.Body>
-      </Card>
-    </Col>
-  ))}
-</Row>
-<br></br>
-<Container>
-  <Navbar expand="lg" variant="light" bg="light">
-    <Container>
-      <Navbar.Brand href="#">Produtos Mais Vendidos</Navbar.Brand>
-    </Container>
-  </Navbar>
-</Container>
-<br></br>
-
-
-
-<Row xs={1} md={2} className="g-4">
-  {Array.from({ length: 2 }).map((_, idx) => (
-    <Col>
-      <Card>
-        <Card.Img variant="top" src="holder.js/100px160" />
-        <Card.Body>
-          <Card.Title>Card title</Card.Title>
-          <Card.Text>
-            This is a longer card with supporting text below as a natural
-            lead-in to additional content. This content is a little bit longer.
-          </Card.Text>
-        </Card.Body>
-      </Card>
-    </Col>
-  ))}
-</Row>
-
-</>
+        </div>
+      </div>
     
   );
-};
+}
 
 export default Home;
