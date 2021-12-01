@@ -1,6 +1,5 @@
 
-import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
+import RouteList from './routes';
 
 
 
@@ -8,14 +7,8 @@ import './App.scss'
 
 function App() {
   return (
-   
     <>
-    <Header />
-
-
-
-
-      <Footer />
+      <RouteList />
     </>
   );
 }
