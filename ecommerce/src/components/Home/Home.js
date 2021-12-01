@@ -1,5 +1,7 @@
 import React from "react";
 import {Carousel,Container,Navbar,Row,Card,Col} from 'react-bootstrap';
+import './Home.scss';
+
 
 
 const Home = () => {
@@ -8,23 +10,42 @@ const Home = () => {
 
 <Carousel>
 
-  <Carousel.Item>
+  <Carousel.Item className="d-flex flex-row w-50 "> 
     <img
-      className="d-block w-100"
-      src="https://res.cloudinary.com/dac23jyqr/image/upload/v1636934069/site/6DDB0214-66E3-45D4-BBAF-3B243D6036EF_k1fpkz.jpg"
+      className="d-flex flex-row w-50 "
+      src="https://res.cloudinary.com/dac23jyqr/image/upload/v1638384699/ecommerce/alexa_iz2qdk.jpg"
       alt="Second slide"
     />
-
+    <img
+      className="d-flex flex-row w-50 "
+      src="https://res.cloudinary.com/dac23jyqr/image/upload/v1638384699/ecommerce/kindle_qracmo.jpg"
+      alt="Second slide"
+    />
+    <img
+      className="d-flex flex-row w-50 "
+      src="https://res.cloudinary.com/dac23jyqr/image/upload/v1638384699/ecommerce/kindle_qracmo.jpg"
+      alt="Second slide"
+    />
     <Carousel.Caption>
       <h3>Second slide label</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </Carousel.Caption>
   </Carousel.Item>
-  <Carousel.Item>
+  <Carousel.Item className="d-flex flex-row w-50"> 
     <img
-      className="d-block w-100"
-      src="https://res.cloudinary.com/dac23jyqr/image/upload/v1636934069/site/6DDB0214-66E3-45D4-BBAF-3B243D6036EF_k1fpkz.jpg"
-      alt="Third slide"
+      className="d-flex flex-row w-50"
+      src="https://res.cloudinary.com/dac23jyqr/image/upload/v1638385118/ecommerce/geladeira_lzg5vm.jpg"
+      alt="Second slide"
+    />
+    <img
+      className="d-flex flex-row w-50"
+      src="https://res.cloudinary.com/dac23jyqr/image/upload/v1638385106/ecommerce/liquidificador_nujfud.jpg"
+      alt="Second slide"
+    />
+    <img
+      className="d-flex flex-row w-50"
+      src="https://res.cloudinary.com/dac23jyqr/image/upload/v1638385106/ecommerce/microondas_cl5fdf.jpg"
+      alt="Second slide"
     />
 
     <Carousel.Caption>
