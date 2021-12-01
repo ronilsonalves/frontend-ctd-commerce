@@ -14,9 +14,7 @@ function App() {
     <Header />
     <Home />
 
-
-
-
+    <br></br>
       <Footer />
     </>
   );

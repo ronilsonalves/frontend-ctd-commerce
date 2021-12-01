@@ -7,17 +7,7 @@ const Home = () => {
       <>
 
 <Carousel>
-  <Carousel.Item>
-    <img
-      className="d-block w-100"
-      src="https://res.cloudinary.com/dac23jyqr/image/upload/v1636934069/site/6DDB0214-66E3-45D4-BBAF-3B243D6036EF_k1fpkz.jpg"
-      alt="First slide"
-    />
-    <Carousel.Caption>
-      <h3>First slide label</h3>
-      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-    </Carousel.Caption>
-  </Carousel.Item>
+
   <Carousel.Item>
     <img
       className="d-block w-100"
