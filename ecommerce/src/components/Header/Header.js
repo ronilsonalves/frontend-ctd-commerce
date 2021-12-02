@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Navbar ,Nav} from 'react-bootstrap'
 import { useStateValue } from "../../StateProvider";
 const Header = () => {
+  // eslint-disable-next-line no-unused-vars
   const [{ basket }] = useStateValue();
   return (
     <>
