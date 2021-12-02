@@ -16,7 +16,7 @@
     width: 100%;
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
     z-index: -1;
-   /*  margin-bottom: -150px; */
+    margin-bottom: -150px;
   }
   section{
     display: flex;
@@ -26,4 +26,7 @@
    text-align: center;
    margin-top: 100px;
   }
+ .carrosel{
+   margin-bottom: 50px ;
+ }
  
