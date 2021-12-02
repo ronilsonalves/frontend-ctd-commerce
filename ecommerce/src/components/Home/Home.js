@@ -11,13 +11,6 @@ function Home() {
       <div className="home__container">
         <div className="home__image">
           <Carousel>
-            {/*  <Carousel.Item>
-              <img
-                className="d-block w-100 home__image"
-                src="https://images-eu.ssl-images-amazon.com/images/G/31/AmazonVideo/2021/X-site/Multititle/jan/Blockbuster_entertainment/EN/1500x600_Hero-Tall_01_FT._CB662389308_.jpg"
-                alt="slide1"
-              />
-            </Carousel.Item> */}
             <Carousel.Item>
               <img
                 className="d-block w-100 home__image"
@@ -32,13 +25,7 @@ function Home() {
                 alt="slide3"
               />
             </Carousel.Item>
-            {/*  <Carousel.Item>
-              <img
-                className="d-block w-100 home__image"
-                src="https://images-eu.ssl-images-amazon.com/images/G/31/img2020/fashion/CAT_ATF/2._CB411390334_.jpg"
-                alt="slide4"
-              />
-            </Carousel.Item> */}
+
             <Carousel.Item>
               <img
                 className="d-block w-100 home__image"
