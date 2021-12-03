@@ -1,0 +1,28 @@
+#root{
+
+    
+    #produtos{
+        background-color:#F6EABE;
+        display: flex;
+        flex-direction: row;
+        
+        .container{
+            margin: 80px auto;
+            padding: 10px auto;
+            width: 80%;
+            .card-body{
+                // align-items: center;
+                // align-content: center;
+                text-align: center;
+            }
+            .btn-primary{
+                background: #f0c14b;
+                border: 1px solid;
+                margin-top: 10px;
+                border-color: #a88734 #9c7e31 #846a29;
+                color: black;
+            }
+        }
+        
+    }
+}
