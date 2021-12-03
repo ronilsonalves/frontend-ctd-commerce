@@ -15,10 +15,16 @@ const Header = () => {
     <Container>
     <Navbar.Brand href="#ctd">CTD COMMERCE</Navbar.Brand>
     <Nav className="me-auto">
-    <Nav.Link href="#home">Home</Nav.Link>
-      <Nav.Link href="#produto">Produto</Nav.Link>
-      {/* <Nav.Link href="/sobrenos">Sobre Nós</Nav.Link> */}
-      <Link to='/sobrenos'>Sobre nós</Link>
+    
+      <Nav.Link>
+      <Link to='/home'style={{ textDecoration: 'none', color:'white' }}>Home</Link>
+      </Nav.Link>
+      <Nav.Link>
+      <Link to='/produto'  style={{ textDecoration: 'none', color:'white' }}>Produtos</Link>
+      </Nav.Link>
+      <Nav.Link>
+      <Link to='/sobrenos' style={{ textDecoration: 'none', color:'white' }}>Sobre nós</Link>
+      </Nav.Link>
       <div class="position-absolute top-0 start-50 translate-middle-x">
       <Nav.Link href="#carrinho" className="d-right"><BsFillBasketFill className="carrinho"></BsFillBasketFill></Nav.Link>       
       </div>
