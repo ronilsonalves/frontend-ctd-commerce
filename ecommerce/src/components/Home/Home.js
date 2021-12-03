@@ -1,12 +1,17 @@
 import React from "react";
 import "./Home.scss";
+import Header from "../Header/Header";
 import Product from "../Produtos/Produtos";
 import Carousel from "react-bootstrap/Carousel";
+import Footer from "../Footer/Footer";
+
 
 
 
 function Home() {
   return (
+    <>
+    <Header/>
     <div className="home">
       <div className="home__container">
         <div className="home__image">
@@ -161,11 +166,12 @@ function Home() {
         </Carousel>
       </div>
     </div>
+    <Footer/>
 
 
 
 
-
+</>
 
   );
 }
