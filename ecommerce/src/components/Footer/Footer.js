@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Navbar ,Nav} from 'react-bootstrap';
-
+import {BsGithub, BsLinkedin, BsTwitter} from 'react-icons/bs';
 
 <p className="d-flex">&copy; 2021 </p>
 const Footer = () => {
@@ -10,12 +10,16 @@ const Footer = () => {
     <Container>
     <Navbar.Brand href="#home"></Navbar.Brand>
     <Nav className="me-auto">
-      <Nav.Link href="#produto"></Nav.Link>
-      <Nav.Link href="#sobrenos"></Nav.Link>
-      <Nav.Link href="#carrinho">Siga as nossas redes sociais </Nav.Link>
+    <Nav.Link href="#home">Siga as nossas redes sociais: </Nav.Link>
+      <Nav.Link href="#home"><BsGithub className="icon-footer" /></Nav.Link>
+      <Nav.Link href="#home"><BsLinkedin className="icon-footer" />  </Nav.Link>
+      <Nav.Link href="#home"><BsTwitter className="icon-footer" /></Nav.Link>
+
     </Nav>
     </Container>
   </Navbar>
+
+
 
   
   

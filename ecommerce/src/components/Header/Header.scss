@@ -1,0 +1,14 @@
+.carrinho{
+    display:flexbox;
+    align-items: right;
+    justify-content: center;
+    height: 200%;
+    width: 200%;
+    background-color: #fff;
+    border-radius: 100%;
+    position: absolute;
+    margin: auto;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+   
