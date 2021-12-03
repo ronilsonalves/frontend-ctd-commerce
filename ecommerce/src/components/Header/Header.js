@@ -17,12 +17,8 @@ const Header = () => {
     <Nav className="me-auto">
     <Nav.Link href="#home">Home</Nav.Link>
       <Nav.Link href="#produto">Produto</Nav.Link>
-<<<<<<< HEAD
       {/* <Nav.Link href="/sobrenos">Sobre Nós</Nav.Link> */}
       <Link to='/sobrenos'>Sobre nós</Link>
-=======
-      <Nav.Link href="/sobrenos">Sobre Nós</Nav.Link>
->>>>>>> aa0c2953ac2dd1e7823079af5e24a9510b4f5245
       <div class="position-absolute top-0 start-50 translate-middle-x">
       <Nav.Link href="#carrinho" className="d-right"><BsFillBasketFill className="carrinho"></BsFillBasketFill></Nav.Link>       
       </div>

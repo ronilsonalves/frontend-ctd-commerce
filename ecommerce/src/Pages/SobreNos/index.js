@@ -8,7 +8,6 @@ import Cards from "../../components/Cards/index";
 //jsx-a11y/alt-text
 // eslint-disable-next-line
 
-<<<<<<< HEAD
 
 
 
@@ -30,27 +29,3 @@ function SobreNos() {
 }
 
 export default SobreNos;
-=======
-
-
-
-function App() {
-
-
-
-  return (
-    
-    <div className="App">
-      
-      <Header />
-      <img class="imagem" src={foto}/>
-      <Descricao/>
-      <Cards/>
-      <Footer />
-    </div>
-    
-  );
-}
-
-export default App;
->>>>>>> aa0c2953ac2dd1e7823079af5e24a9510b4f5245
