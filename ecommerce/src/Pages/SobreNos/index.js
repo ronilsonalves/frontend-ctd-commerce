@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 
 import "../../Pages/SobreNos/style.scss"
 import Header from "../../components/Header/Header";

@@ -9,6 +9,7 @@ function Routelist(){
     return(
         <BrowserRouter>        
             <Routes>
+            <Route path='/' element={<Home/>}/>
             <Route path='/home' element={<Home/>}/>
             <Route path='/produto' element={<Produtos/>}/>
             <Route path='/sobrenos' element={<Sobre/>} />        
