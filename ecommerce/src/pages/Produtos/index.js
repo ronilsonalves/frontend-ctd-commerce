@@ -36,7 +36,7 @@ const Produtos = () => {
                                 >
                                      {duplicatas.length !== 0 && (
                                          duplicatas.map((categoria) =>(
-                                             <NavDropdown.Item key={categoria}><Link to={`/produtos/${categoria}`}>{categoria}</Link></NavDropdown.Item>
+                                             <NavDropdown.Item key={categoria}><Link to={`/produtos/categoria/${categoria}`}>{categoria}</Link></NavDropdown.Item>
                                              
                                          ))
                                      )}  

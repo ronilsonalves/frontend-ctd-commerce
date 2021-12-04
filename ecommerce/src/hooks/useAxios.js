@@ -10,7 +10,6 @@ const useAxios = (url) => {
             try {
                 const restApi = api.get(url)
                     .then((response) => {
-                        console.log(response.data)
                         setData(response.data)
                     });
             } catch (error) {

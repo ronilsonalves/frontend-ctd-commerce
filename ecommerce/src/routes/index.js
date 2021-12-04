@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
 /* Importem as páginas abaixo */
-import TestApi from '../pages/TestApi';
 import Produtos from '../pages/Produtos';
+import ProdutosPorCategoria from '../pages/ProdutosPorCategoria';
 
 const RouteList = () => (
     <BrowserRouter>
@@ -11,9 +11,7 @@ const RouteList = () => (
         </nav>
         <Routes>
             <Route path="/produtos" element={<Produtos />} />
-            <Route path="/produtos/:category" element={<Produtos />} />
-            <Route path="/test" element={<TestApi />} />
-
+            <Route path="/produtos/categoria/:category" element={<ProdutosPorCategoria />} />
             {/* Demais rotas vão aqui.... */}
         </Routes>
         <footer>
