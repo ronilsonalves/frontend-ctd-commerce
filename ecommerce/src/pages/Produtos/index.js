@@ -18,11 +18,11 @@ const Produtos = () => {
 
 
                 <Container className="container">
-                    <Row xs={1} md={3} className="g-4 row">
+                    <Row xs={1} sm={2} md={3} lg={3} className="g-3 row ">
                         {produtos.length !== 0 && (
                             produtos.map((produto) =>
                             (
-                                <Col key={produto.id} className="col" >
+                                <Col key={produto.id} className="col mx-auto " >
                                     <Card className="card-container ">
                                         <Link to={`/produto/${produto.id}`}>
                                             <Card.Img variant="top" src={produto.image} />
