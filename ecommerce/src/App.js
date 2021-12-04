@@ -1,4 +1,5 @@
 import "./App.scss";
+import '../src/components/Header/Header.scss'
 // import Header from "../src/components/Header/Header";
 // import Home from "../src/components/Home/Home";
 // import Footer from "../src/components/Footer/Footer";

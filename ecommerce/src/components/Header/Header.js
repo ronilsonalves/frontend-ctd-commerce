@@ -1,8 +1,9 @@
 import React from "react";
-import { Container, Navbar ,Nav} from 'react-bootstrap'
+import { Container, Navbar, Nav } from 'react-bootstrap'
 import { useStateValue } from "../../StateProvider";
-import{BsFillBasketFill} from 'react-icons/bs'
+import { BsFillBasketFill } from 'react-icons/bs'
 import { Link } from "react-router-dom";
+import logo from '../Header/img/logo.png';
 
 
 
@@ -11,31 +12,43 @@ const Header = () => {
   const [{ basket }] = useStateValue();
   return (
     <>
-  <Navbar bg="dark" variant="dark">
-    <Container>
-    <Navbar.Brand href="#ctd">CTD COMMERCE</Navbar.Brand>
-    <Nav className="me-auto">
-    
-      <Nav.Link>
-      <Link to='/home'style={{ textDecoration: 'none', color:'white' }}>Home</Link>
-      </Nav.Link>
-      <Nav.Link>
-      <Link to='/produto'  style={{ textDecoration: 'none', color:'white' }}>Produtos</Link>
-      </Nav.Link>
-      <Nav.Link>
-      <Link to='/sobrenos' style={{ textDecoration: 'none', color:'white' }}>Sobre nós</Link>
-      </Nav.Link>
-      <div class="position-absolute top-0 start-50 translate-middle-x">
-      <Nav.Link href="#carrinho" className="d-right"><BsFillBasketFill className="carrinho"></BsFillBasketFill></Nav.Link>       
-      </div>
-    </Nav>
-    </Container>
-  </Navbar>
 
-  
-  
-</>
-    
+      <Navbar collapseOnSelect fixed="top"  bg="dark" variant="dark" expand="sm" >
+
+        <Container className="container">
+
+          <Navbar.Brand href="/"> <img className="logo"
+            src={logo}
+            alt="logo"
+          />
+          </Navbar.Brand>
+
+          <Navbar.Toggle aria-controls='responsive-navbar-nav'className="justify-content-end " style={{textAlign: "center"}} />
+          <Navbar.Collapse id='responsive-navbar-nav' className="justify-content-end" style={{textAlign: "center"}} >
+
+            <Nav>
+              <Nav.Link>
+                <Link to='/home' style={{ textDecoration: 'none', color: 'white' }}>Home</Link>
+              </Nav.Link>
+              <Nav.Link>
+                <Link to='/produto' style={{ textDecoration: 'none', color: 'white' }}>Produtos</Link>
+              </Nav.Link>
+              <Nav.Link>
+                <Link to='/sobrenos' style={{ textDecoration: 'none', color: 'white' }}>Sobre nós</Link>
+              </Nav.Link>
+
+              <Link to="/" className="d-right"><BsFillBasketFill className="carrinho"></BsFillBasketFill></Link>
+
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+
+
+
+
+    </>
+
   );
 };
 

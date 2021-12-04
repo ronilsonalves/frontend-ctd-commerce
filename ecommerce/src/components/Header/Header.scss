@@ -1,14 +1,38 @@
+
 .carrinho{
     display:flexbox;
     align-items: right;
-    justify-content: center;
-    height: 200%;
-    width: 200%;
-    background-color: #fff;
-    border-radius: 100%;
-    position: absolute;
-    margin: auto;
+    height:25px;
+    width: 50px;
+    color: #fff;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
+#responsive-navbar-nav{
+    align-items: center;
+  align-content: center;
+}
+    
+
+   
+   
+
+/* .carrinho{
+    margin:20px;
+    width: 50px;
+    height: 25px;
+    background-color: red;
+    margin: 50px
+} */
+.logo{
+    width: 150px;
+    height: 50px;
+}
+
+
+ 
+  
+    
+ 
+
    
