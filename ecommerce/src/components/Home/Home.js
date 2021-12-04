@@ -8,9 +8,11 @@ import Footer from "../Footer/Footer";
 
 
 
+
 function Home() {
   return (
     <>
+   
     <Header/>
     <div className="home">
       <div className="home__container">
