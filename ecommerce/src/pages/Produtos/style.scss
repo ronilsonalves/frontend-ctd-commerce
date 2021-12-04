@@ -5,6 +5,15 @@
         background-color:#F6EABE;
         display: flex;
         flex-direction: column;
+
+        .container-nav{
+            .dropdown-menu{
+                a{
+                    text-decoration: none;
+                    color:white;
+                }
+            }
+        }
         
         .container{
             margin: 10px auto;
