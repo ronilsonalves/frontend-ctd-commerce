@@ -5,13 +5,13 @@ import './notfound.scss';
 import Footer from '../../components/Footer/Footer';
 
 const NotFound = () => {
-  // eslint-disable-next-line no-unused-vars
+
   const navigate = useNavigate();
 
- /*  setTimeout(() => {
+  setTimeout(() => {
     navigate('/');
   }, 5000);
- */
+
   return (
     <>
     <Header />
