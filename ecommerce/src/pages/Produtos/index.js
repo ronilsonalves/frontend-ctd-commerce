@@ -15,19 +15,14 @@ const Produtos = () => {
     })
 
     let duplicatas = [...new Set(listaDeCategorias)]
-
-    function clickHere () {
-     
-    }
-
-
+    
     return (
         <>
             <Helmet>
                 <title>CTD Commerce | Todos os produtos</title>
             </Helmet>
             <section id="produtos">
-            <Container>
+            <Container className="container-nav">
                 <Navbar variant="dark" bg="dark" expand="lg">
                     <Container fluid>
                         <Navbar.Brand href="#home">Filtro por categorias</Navbar.Brand>
@@ -41,12 +36,10 @@ const Produtos = () => {
                                 >
                                      {duplicatas.length !== 0 && (
                                          duplicatas.map((categoria) =>(
-                                             <NavDropdown.Item key={categoria}><Link to={`/produtos/${categoria}`}>{categoria}</Link></NavDropdown.Item>
+                                             <NavDropdown.Item key={categoria}><Link to={`/produtos/categoria/${categoria}`}>{categoria}</Link></NavDropdown.Item>
                                              
                                          ))
                                      )}  
-                                    {/* <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                                    <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item> */}
                                 </NavDropdown>
                             </Nav>
                         </Navbar.Collapse>
