@@ -1,22 +1,23 @@
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
 
 /* Importem as páginas abaixo */
 import Produtos from '../pages/Produtos';
+import DetalhesProduto from '../pages/DetalhesProduto';
 import ProdutosPorCategoria from '../pages/ProdutosPorCategoria';
+import SearchResults from '../pages/SearchResults';
+import Header from '../components/Header/Header';
+import Footer from '../components/Footer/Footer'
 
 const RouteList = () => (
     <BrowserRouter>
-        <nav>
-            {/* Componente NAVBAR vai aqui */}
-        </nav>
+        <Header />
         <Routes>
             <Route path="/produtos" element={<Produtos />} />
+            <Route path="/produto/:id" element={<DetalhesProduto />} />
             <Route path="/produtos/categoria/:category" element={<ProdutosPorCategoria />} />
-            {/* Demais rotas vão aqui.... */}
+            <Route path="/busca/:byname" element={<SearchResults />} />
         </Routes>
-        <footer>
-            {/* Componente Footer vai aqui */}
-        </footer>
+        <Footer />
     </BrowserRouter>
 );
 

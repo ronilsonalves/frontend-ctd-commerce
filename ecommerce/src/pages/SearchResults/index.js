@@ -1,8 +1,8 @@
 import { useParams } from "react-router";
 import { Helmet } from "react-helmet";
-import { Col, Row, Button, Card, Container} from 'react-bootstrap';
+import { Col, Row, Button, Card, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import Header from "../../components/Header/Header"
+import SearchBox from "../../components/SearchBox";
 
 import '../Produtos/style.scss';
 
@@ -16,9 +16,8 @@ const SearchResults = () => {
     return (
         <>
             <Helmet title={`CTD Commerce | ${resultadoPesquisa.length !== 0 ? 'Busca por ' + byName.byname : 'Não foram encontrados produtos'}`}></Helmet>
-            <Header></Header>
-
             <section id="produtos">
+                <SearchBox />
                 <h3 className="display-5 text-center my-3 py-3">Confira o resultado da sua pesquisa</h3>
                 {resultadoPesquisa.length !== 0 ? <Container className="container">
                     <Row xs={1} sm={2} md={3} lg={3} className="g-3 row ">
@@ -44,7 +43,7 @@ const SearchResults = () => {
                         )}
                     </Row>
                 </Container>
-                    : <h2>Não foram encontrados produtos para o termo " {byName.byname} " buscado</h2>}
+                    : <h3 className="display-6">Não foram encontrados produtos para o termo " <b>{byName.byname}</b> " buscado</h3>}
             </section>
         </>
     )

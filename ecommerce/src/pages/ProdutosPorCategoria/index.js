@@ -4,6 +4,7 @@ import { useParams } from "react-router";
 import { Link } from "react-router-dom";
 import { Container, Row, Col, Card, Button, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { Helmet } from "react-helmet";
+import SearchBox from "../../components/SearchBox";
 
 
 import './style.scss';
@@ -19,7 +20,7 @@ const ProdutosPorCategoria = () => {
     produtos.map((categoria) => {
         return categoriaSelecionada.push(categoria.nome)
     })
-    
+
     let tituloSelecionado = [...new Set(categoriaSelecionada)]
 
     let todasCategorias = [];
@@ -34,6 +35,7 @@ const ProdutosPorCategoria = () => {
         <>
             <Helmet title={`CTD Commerce | ${produtos !== null ? tituloSelecionado : 'Categoria não encontrado'}`}></Helmet>
             <section id="produtos">
+                <SearchBox />
                 <Container className="container-nav">
                     <Navbar variant="dark" bg="dark" expand="lg">
                         <Container fluid>

@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet";
 import { Col, Row, Button, Card, Container, Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAxios from "../../hooks/useAxios";
+import SearchBox from "../../components/SearchBox";
 import './style.scss';
 
 const Produtos = () => {
@@ -22,6 +23,7 @@ const Produtos = () => {
                 <title>CTD Commerce | Todos os produtos</title>
             </Helmet>
             <section id="produtos">
+            <SearchBox /> {/* SearchBox */}
             <Container className="container-nav">
                 <Navbar variant="dark" bg="dark" expand="lg">
                     <Container fluid>
