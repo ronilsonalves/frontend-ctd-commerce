@@ -10,7 +10,7 @@ import useAxios from "../../hooks/useAxios";
 
 const SearchResults = () => {
     const byName = useParams();
-    const resultadoPesquisa = useAxios(`/byname/${byName.byname}`);
+    const resultadoPesquisa = useAxios(`/${byName.byname}`);
 
 
     return (
