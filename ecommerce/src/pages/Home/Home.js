@@ -59,7 +59,9 @@ function Home() {
                                         <Card.Text style={{ height: '6.50rem' }} title={produto.descricao} className="card-text">
                                             {produto.descricao >= 77 ? produto.descricao : produto.descricao.substring(0, 76) + "..."}
                                         </Card.Text>
-                                        <Button variant="primary" >Ver detalhes</Button>
+                                        <Link to={`/produto/${produto.id}`}>
+                                            <Button variant="primary" >Ver mais</Button>
+                                        </Link>
                                     </Card.Body>
                                 </Card>
                             </Col>
@@ -75,6 +77,7 @@ function Home() {
             <div className="categorias">
                 <h2>Mais Vendidos</h2>
             </div>
+           
 
             <div className="carrosel">
                 <Carousel>
@@ -93,11 +96,13 @@ function Home() {
                                                 <Card.Text style={{ height: '6.50rem' }} title={produto.descricao} className="card-text">
                                                     {produto.descricao >= 77 ? produto.descricao : produto.descricao.substring(0, 76) + "..."}
                                                 </Card.Text>
-                                                <Button variant="primary" >Ver detalhes</Button>
+                                                <Link to={`/produto/${produto.id}`}>
+                                                    <Button variant="primary" >Ver mais</Button>
+                                                </Link>
                                             </Card.Body>
                                         </Card>
                                     </Col>
-                                )).slice(0, 3)
+                                )).slice(3, 6)
                             )
 
 
@@ -120,7 +125,9 @@ function Home() {
                                                 <Card.Text style={{ height: '6.50rem' }} title={produto.descricao} className="card-text">
                                                     {produto.descricao >= 77 ? produto.descricao : produto.descricao.substring(0, 76) + "..."}
                                                 </Card.Text>
-                                                <Button variant="primary" >Ver detalhes</Button>
+                                                <Link to={`/produto/${produto.id}`}>
+                                                    <Button variant="primary" >Ver mais</Button>
+                                                </Link>
                                             </Card.Body>
                                         </Card>
                                     </Col>
