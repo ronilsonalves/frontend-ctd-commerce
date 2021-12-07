@@ -1,7 +1,7 @@
 import React from "react";
 import "./Home.scss";
 import useAxios from "../../hooks/useAxios";
-import { Col, Card, Button } from 'react-bootstrap';
+import { Col, Card, Button, Row } from 'react-bootstrap';
 import Carousel from "react-bootstrap/Carousel";
 import { Link } from 'react-router-dom';
 
@@ -41,9 +41,9 @@ function Home() {
                     </Carousel.Item>
                 </Carousel>
             </div>
-
+            <Row xs={1} sm={2} md={3} lg={3} className="g-3 row ">
             <div className="categorias">
-                <h2>Eletrônicos</h2>
+               
                 <div className="home__row">
 
                     {produtos.length !== 0 && (
@@ -72,8 +72,9 @@ function Home() {
 
                     }
                 </div>
-
+                
             </div>
+            </Row>
             <div className="categorias">
                 <h2>Mais Vendidos</h2>
             </div>

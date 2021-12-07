@@ -1,18 +1,38 @@
 import React from "react";
+import './Header.scss';
 import { Container, Navbar ,Nav} from 'react-bootstrap';
+import { BsFillBasketFill } from 'react-icons/bs';
+import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <>
-  <Navbar bg="dark" variant="dark">
-    <Container>
-    <Navbar.Brand href="#home">Home</Navbar.Brand>
-    <Nav className="me-auto">
-      <Nav.Link href="#produto">Produto</Nav.Link>
-      <Nav.Link href="#sobrenos">Sobre Nós</Nav.Link>
-      <Nav.Link href="#carrinho">Carrinho</Nav.Link>
+  <Navbar collapseOnSelect fixed="top"  bg="dark" variant="dark" expand="sm" >
+
+<Container className="container">
+
+  <Navbar.Brand href="/">Ecommerce</Navbar.Brand>
+ 
+
+  <Navbar.Toggle aria-controls='responsive-navbar-nav'className="justify-content-end " style={{textAlign: "center"}} />
+  <Navbar.Collapse id='responsive-navbar-nav' className="justify-content-end" style={{textAlign: "center"}} >
+
+    <Nav>
+      <Nav.Link>
+        <Link to='/home' style={{ textDecoration: 'none', color: 'white' }}>Home</Link>
+      </Nav.Link>
+      <Nav.Link>
+        <Link to='/produto' style={{ textDecoration: 'none', color: 'white' }}>Produtos</Link>
+      </Nav.Link>
+      <Nav.Link>
+        <Link to='/sobrenos' style={{ textDecoration: 'none', color: 'white' }}>Sobre nós</Link>
+      </Nav.Link>
+
+      <Link to="/" className="d-right"><BsFillBasketFill className="carrinho"></BsFillBasketFill></Link>
+
     </Nav>
-    </Container>
-  </Navbar>
+  </Navbar.Collapse>
+</Container>
+</Navbar>
 
   
   

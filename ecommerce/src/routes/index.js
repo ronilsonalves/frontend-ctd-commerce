@@ -7,6 +7,7 @@ import ProdutosPorCategoria from '../pages/ProdutosPorCategoria';
 import SearchResults from '../pages/SearchResults';
 import Header from '../components/Header/Header';
 import Home from '../pages/Home/Home';
+import SobreNos from '../pages/SobreNos/SobreNos';
 import Footer from '../components/Footer/Footer';
 
 const RouteList = () => (
@@ -18,6 +19,7 @@ const RouteList = () => (
             <Route path="/produto/:id" element={<DetalhesProduto />} />
             <Route path="/produtos/categoria/:category" element={<ProdutosPorCategoria />} />
             <Route path="/busca/:byname" element={<SearchResults />} />
+            <Route path="/sobrenos" element={<SobreNos />} />
         </Routes>
         <Footer />
     </BrowserRouter>
