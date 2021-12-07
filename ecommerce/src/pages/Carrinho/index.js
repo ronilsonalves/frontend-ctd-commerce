@@ -3,6 +3,9 @@ import {useContext} from 'react';
 
 
 const Carrinho = () => {
-    const { produtosNoCarrinho} = useContext(CarrinhoContext);
+    const { adicionarCarrinho} = useContext(CarrinhoContext);
+    const { removerDoCarrinho} = useContext(CarrinhoContext);
+
+
 }
 

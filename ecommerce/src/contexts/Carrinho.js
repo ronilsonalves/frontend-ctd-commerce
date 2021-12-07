@@ -1,9 +1,10 @@
 import {createContext, useReducer, useEffect} from 'react';
+import carrinhoReducer from '../reducers/carrinhoReducer';
 
 export const CarrinhoContext = createContext();
 
 const CarrinhoContextProvider = ({children})=>{
-    const [produtosCarrinho, dispatch] = useReducer(useReducer,[],() => {
+    const [produtosCarrinho, dispatch] = useReducer(carrinhoReducer,[],() => {
 
         const localData = localStorage.getItem('produtosNoCarrinho');
         return localData ? JSON.parse(localData):[];

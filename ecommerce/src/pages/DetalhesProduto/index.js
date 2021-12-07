@@ -12,13 +12,7 @@ const DetalhesProduto = () => {
     const detalhes = useAxios(`/${id.id}`);
     const { adicionarCarrinho} = useContext(CarrinhoContext);
 
-    const adicionarAoClick = () =>{
-        adicionarCarrinho(detalhes)
-        // if(detalhes !== null){
-        //     adicionarCarrinho(detalhes)
-        // }
-    }
-
+    
     return (
         <>
             <Helmet title={`CTD Commerce | ${detalhes !== null ? detalhes.titulo : 'Produto não encontrado'}`}></Helmet>
@@ -32,7 +26,7 @@ const DetalhesProduto = () => {
                             <Card.Body>
                                 <Card.Title className="display-4" title={detalhes.titulo}>{detalhes.titulo}</Card.Title>
                                 <Card.Title className="display-6">R$ {detalhes.preco}</Card.Title>
-                                <Button variant="secondary" onClick={adicionarAoClick} >Adicionar ao carrinho</Button>
+                                <Button variant="secondary" onClick={()=>{adicionarCarrinho(detalhes)}} >Adicionar ao carrinho</Button>
                             </Card.Body>
                         </Col>
                     </Row>

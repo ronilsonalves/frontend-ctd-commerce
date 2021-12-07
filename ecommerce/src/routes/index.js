@@ -1,6 +1,4 @@
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
-
-
 /* Importem as páginas abaixo */
 import Produtos from '../pages/Produtos';
 import DetalhesProduto from '../pages/DetalhesProduto';
