@@ -1,20 +1,34 @@
 import React from "react";
-
+import { Container, Row } from 'react-bootstrap';
 import UsersCard from "../../components/UsersCard";
+import Projeto from "./Projeto";
+import Equipe from "./Equipe";
 
-function SobreNos (){
-    const users = ['patriciaruffino', 'ronilsonalves']
-   
-    return (
-        <>
-        {users.length !== 0 && (
-             users.map((usuario)=>(
-                <UsersCard integrante={usuario} />
-             ))
-        )}
-       
-       
-      {/*   {users.map(users => {
+
+function SobreNos() {
+	const users = ['patriciaruffino', 'ronilsonalves', 'henriquetebet', 'patyspro', 'msilvabr', 'SamuelFXavier']
+
+	return (
+		<>
+			<Projeto />
+			<Equipe />
+			<Container className="container">
+				<Row xs={1} sm={2} md={3} lg={3} className="g-3 row ">
+
+					{users.length !== 0 && (
+						users.map((usuario) => (
+							<UsersCard integrante={usuario} />
+						))
+					)}
+				</Row>
+			</Container>
+
+
+
+
+
+
+			{/*   {users.map(users => {
 				return (
 					<div className="card text-center">
 
@@ -32,8 +46,8 @@ function SobreNos (){
 
 				)
 			})} */}
-        </>
-        
-    )
+		</>
+
+	)
 }
 export default SobreNos;

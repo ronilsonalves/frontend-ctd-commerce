@@ -21,4 +21,4 @@ const useAPIGIT =  (user) =>{
     return dataUser;
 }
 
-export default apiGit;
+export default useAPIGIT;

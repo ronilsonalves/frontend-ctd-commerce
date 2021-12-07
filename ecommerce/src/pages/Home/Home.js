@@ -42,43 +42,43 @@ function Home() {
                 </Carousel>
             </div>
             <Row xs={1} sm={2} md={3} lg={3} className="g-3 row ">
-            <div className="categorias">
-               
-                <div className="home__row">
+                <div className="categorias">
 
-                    {produtos.length !== 0 && (
+                    <div className="home__row">
 
-                        produtos.map((produto) => (
-                            <Col key={produto.id} className="col mx-auto " >
-                                <Card className="card-container ">
-                                    <Link to={`/produto/${produto.id}`}>
-                                        <Card.Img variant="top" src={produto.image} />
-                                    </Link>
-                                    <Card.Body className="card-body">
-                                        <Card.Title >{produto.titulo}</Card.Title>
-                                        <Card.Text style={{ height: '6.50rem' }} title={produto.descricao} className="card-text">
-                                            {produto.descricao >= 77 ? produto.descricao : produto.descricao.substring(0, 76) + "..."}
-                                        </Card.Text>
+                        {produtos.length !== 0 && (
+
+                            produtos.map((produto) => (
+                                <Col key={produto.id} className="col mx-auto " >
+                                    <Card className="card-container ">
                                         <Link to={`/produto/${produto.id}`}>
-                                            <Button variant="primary" >Ver mais</Button>
+                                            <Card.Img variant="top" src={produto.image} />
                                         </Link>
-                                    </Card.Body>
-                                </Card>
-                            </Col>
-                        )).slice(0, 3)
-                    )
+                                        <Card.Body className="card-body">
+                                            <Card.Title >{produto.titulo}</Card.Title>
+                                            <Card.Text style={{ height: '6.50rem' }} title={produto.descricao} className="card-text">
+                                                {produto.descricao >= 77 ? produto.descricao : produto.descricao.substring(0, 76) + "..."}
+                                            </Card.Text>
+                                            <Link to={`/produto/${produto.id}`}>
+                                                <Button variant="primary" >Ver mais</Button>
+                                            </Link>
+                                        </Card.Body>
+                                    </Card>
+                                </Col>
+                            )).slice(0, 3)
+                        )
 
 
 
-                    }
+                        }
+                    </div>
+
                 </div>
-                
-            </div>
             </Row>
             <div className="categorias">
                 <h2>Mais Vendidos</h2>
             </div>
-           
+
 
             <div className="carrosel">
                 <Carousel>

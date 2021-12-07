@@ -1,25 +1,38 @@
 import useAPIGIT from "../../hooks/useAPIGIT";
-import { Button, Card } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Card, Row, Container } from 'react-bootstrap';
+
+import index from './index.scss';
 
 export default function UsersCard(user) {
     console.log(user)
     const userData = useAPIGIT(`${user.integrante}`)
-      
+
     return (
         <>
-            <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={userData.avatar_url} />
-                <Card.Body>
-                    <Card.Title>{userData.name}</Card.Title>
-                    <Card.Text>
-                        {userData.bio}
-                    </Card.Text>
-                    <Link to ={userData.blog}>
-                    <Button variant="primary">Go somewhere</Button>
-                    </Link>
-                </Card.Body>
-            </Card>
+            <Container>
+
+                <Row xs={1} sm={2} md={3} lg={3} className="d-inline-flex justify-content-center">
+                    <Card style={{ width: '10rem' }} id="card-git">
+                        <a href={userData.html_url}>
+                            <Card.Img variant="top" src={userData.avatar_url} id="git" />
+                        </a>
+                        <Card.Body>
+                            {/* <Card.Title>{userData.name}</Card.Title> */}
+                            <Card.Title>{userData.login}</Card.Title>
+                            <Card.Text>
+                                {userData.bio}
+                            </Card.Text>
+
+                            {/*      <Button variant="primary">Go somewhere</Button> */}
+
+                        </Card.Body>
+
+                    </Card>
+                </Row>
+            </Container>
+
+
+
 
         </>
     )
