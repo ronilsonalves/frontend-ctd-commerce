@@ -22,17 +22,17 @@
             .col{
                 
                 max-width: 255px;
-
+                
                 .card-container{
-
+                    
                     text-align: center;
                     padding-top: 10px;
-
+                    
                     .card-img-top{
                         width: 80%;
                         max-height: 106px;
                     }
-
+                    
                     .card-body{
                         text-align: center;
                             .btn-primary{
@@ -49,3 +49,10 @@
         
     }
 }
+
+.card-container:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 0px , -1em 0 0.1em grey;
+    // box-shadow: 0px 0px 0px 5px;
+
+}    

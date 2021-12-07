@@ -16,7 +16,6 @@ const Produtos = () => {
     })
 
     let duplicatas = [...new Set(listaDeCategorias)]
-    
     return (
         <>
             <Helmet>

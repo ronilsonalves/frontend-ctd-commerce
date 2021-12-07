@@ -30,7 +30,7 @@ const ProdutosPorCategoria = () => {
     })
 
     let tituloCategoria = [...new Set(todasCategorias)]
-
+    
     return (
         <>
             <Helmet title={`CTD Commerce | ${produtos !== null ? tituloSelecionado : 'Categoria não encontrado'}`}></Helmet>
@@ -59,9 +59,10 @@ const ProdutosPorCategoria = () => {
                         </Container>
                     </Navbar>
                 </Container>
-                <Container className="container">
+                  <Container className="container">
                     <Row xs={1} sm={2} md={3} lg={3} className="g-3 row ">
-                        {produtos.length !== 0 && (
+                         
+                            {produtos.length !== 0 && (                    
                             produtos.map((produto) =>
                             (
                                 <Col key={produto.produtos[0].id} className="col mx-auto " >
@@ -77,10 +78,9 @@ const ProdutosPorCategoria = () => {
                                             <Button variant="primary" >Ver detalhes</Button>
                                         </Card.Body>
                                     </Card>
-                                </Col>
-                            )
-                            )
-                        )}
+                                    </Col>
+                            ))
+                            )}
                     </Row>
                 </Container>
             </section>
