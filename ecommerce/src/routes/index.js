@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 
+
 /* Importem as páginas abaixo */
 import Produtos from '../pages/Produtos';
 import DetalhesProduto from '../pages/DetalhesProduto';
@@ -9,9 +10,10 @@ import Header from '../components/Header/Header';
 import Home from '../pages/Home/Home';
 import SobreNos from '../pages/SobreNos/SobreNos';
 import Footer from '../components/Footer/Footer';
-
+import CarrinhoContextProvider from '../contexts/Carrinho';
 const RouteList = () => (
     <BrowserRouter>
+    <CarrinhoContextProvider>
         <Header />
         <Routes>
             <Route path="/" element={<Home />} />
@@ -22,6 +24,7 @@ const RouteList = () => (
             <Route path="/sobrenos" element={<SobreNos />} />
         </Routes>
         <Footer />
+        </CarrinhoContextProvider>
     </BrowserRouter>
 );
 
