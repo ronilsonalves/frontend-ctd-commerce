@@ -4,7 +4,7 @@ const carrinhoReducer = (state, action) => {
         case "ADD_TO_CART":
             if (action.payload !== null && state.length > 0) {
                 const newArray = [];
-                state.forEach((produto, index) => {
+                state.forEach((produto) => {
                     if (action.payload.id !== produto.id) {
                         newArray.push(produto)
                     }

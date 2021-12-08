@@ -1,32 +1,33 @@
 
 import { CarrinhoContext } from '../../contexts/Carrinho';
-import { useContext, useEffect } from 'react';
+import { useContext, useState } from 'react';
 import { Container, ListGroup, Card, Button } from 'react-bootstrap';
+import { Formik, Field, Form } from 'formik';
+
 
 const Carrinho = () => {
     const { produtosCarrinho, adicionarCarrinho, removerDoCarrinho } = useContext(CarrinhoContext);
     let todosOsProdutos = [...produtosCarrinho]
 
+    const [quantidade, setQuantidade] = useState(1)
 
-    const salvarProdutos = new Map();
-    let produtosUnicos = [];
-    todosOsProdutos.forEach((produto) => {
-        if (!salvarProdutos.has(produto.id)) {
-            salvarProdutos.set(produto.id, produto);
-        }
-    });
-
-    for (const value of salvarProdutos.values()) {
-        produtosUnicos.push(value)
+    const handleAdicionarCarrinho = (produto) => {
+        produto.quantidade = quantidade
+        adicionarCarrinho(produto)
     }
-
-    console.log(todosOsProdutos)
-    console.log(produtosUnicos)
+    
+    // function atualizar (values,produto){
+        //     console.log(produto)
+        //     setQuantidade(values.qtd)
+        //     handleAdicionarCarrinho(produto)
+        // }
+        
+    let valorTotal= 0
     return (
         <>
             <ListGroup>
-                {produtosUnicos.length !== 0 && (
-                    produtosUnicos.map((produto) => (
+                {todosOsProdutos.length !== 0 && (
+                    todosOsProdutos.map((produto) => (
                         <ListGroup.Item key={produto.id} >
                             <Container>
                                 <Card className="flex-row">
@@ -42,9 +43,11 @@ const Carrinho = () => {
                                     <Card.Title>R${produto.preco} </Card.Title>
                                 </Card>
                             </Container>
+                            <p style={{display:'none'}}>{valorTotal = valorTotal + (produto.quantidade * produto.preco)}</p>
                         </ListGroup.Item>
                     ))
                 )}
+                <ListGroup.Item>R${valorTotal}</ListGroup.Item>
             </ListGroup>
         </>
     )
