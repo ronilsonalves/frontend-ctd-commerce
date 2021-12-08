@@ -17,7 +17,7 @@ const Header = () => {
 
             <Nav>
               <Nav.Link>
-                <Link to='/home' style={{ textDecoration: 'none', color: 'white' }}>Home</Link>
+                <Link to='/' style={{ textDecoration: 'none', color: 'white' }}>Home</Link>
               </Nav.Link>
               <Nav.Link>
                 <Link to='/produtos' style={{ textDecoration: 'none', color: 'white' }}>Produtos</Link>
@@ -26,7 +26,7 @@ const Header = () => {
                 <Link to='/sobrenos' style={{ textDecoration: 'none', color: 'white' }}>Sobre nós</Link>
               </Nav.Link>
 
-              <Link to="/carinho" className="d-right"><BsFillBasketFill className="carrinho"></BsFillBasketFill></Link>
+              <Link to="/carrinho" className="d-right"><BsFillBasketFill className="carrinho"></BsFillBasketFill></Link>
 
             </Nav>
           </Navbar.Collapse>
