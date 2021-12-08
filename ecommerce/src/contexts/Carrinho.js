@@ -19,7 +19,7 @@ const CarrinhoContextProvider = ({children})=>{
     }, [produtosCarrinho]);
 
     return(
-        <CarrinhoContext.Provider value={{produtosCarrinho, adicionarCarrinho}}>
+        <CarrinhoContext.Provider value={{produtosCarrinho, adicionarCarrinho, removerDoCarrinho}}>
             {children}
         </CarrinhoContext.Provider>    
     )
