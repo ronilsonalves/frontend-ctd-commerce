@@ -24,14 +24,14 @@ function Home() {
                         <img
                             className="d-block w-100 home__image"
                             src="https://res.cloudinary.com/dac23jyqr/image/upload/v1638485715/ecommerce/banner_yfojmd.jpg"
-                            alt="slide1"
+                            alt="slide2"
                         />
                     </Carousel.Item>
                     <Carousel.Item>
                         <img
                             className="d-block w-100 home__image"
                             src="https://res.cloudinary.com/dac23jyqr/image/upload/v1638486266/ecommerce/eletronicos_pw440b.jpg"
-                            alt="slide2"
+                            alt="slide3"
                         />
                     </Carousel.Item>
 
@@ -39,7 +39,7 @@ function Home() {
                         <img
                             className="d-block w-100 home__image"
                             src="https://res.cloudinary.com/dac23jyqr/image/upload/v1638486424/ecommerce/programa_dl7bac.jpg"
-                            alt="slide3"
+                            alt="slide5"
                         />
                     </Carousel.Item>
                 </Carousel>
