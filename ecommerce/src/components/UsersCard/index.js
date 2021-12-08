@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 import useAPIGIT from "../../hooks/useAPIGIT";
 import { Card, Row, Container } from 'react-bootstrap';
 
@@ -11,9 +12,9 @@ export default function UsersCard(user) {
         <>
             <Container>
 
-                <Row xs={1} sm={2} md={3} lg={3} className="d-inline-flex justify-content-center">
+                <Row xs={1} sm={2} md={3} lg={3} className="justify-content-center">
                     <Card style={{ width: '10rem' }} id="card-git">
-                        <a href={userData.html_url}>
+                        <a href={userData.html_url} target= "_blank" rel="perfil_github">
                             <Card.Img variant="top" src={userData.avatar_url} id="git" />
                         </a>
                         <Card.Body>
