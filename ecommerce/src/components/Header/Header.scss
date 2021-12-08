@@ -5,18 +5,26 @@
     width: 50px;
     color: #fff;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
 }
+    
+.carrinho:hover{
+  color:  #f0c14b !important;
+  transition: all 0.3s ease-in-out;
+}
+
 #responsive-navbar-nav{
     align-items: center;
   align-content: center;
 }
+
 .navbar{
   text-transform: uppercase;
   font-size: 14px;
   font-weight: bold;
 }
+
 .navbar-nav > a > a:hover{
   color:  #f0c14b !important;
-  }
+  transition: all 0.3s ease-in-out;
+}
     

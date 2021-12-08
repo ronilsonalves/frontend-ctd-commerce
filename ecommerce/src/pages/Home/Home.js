@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import "./Home.scss";
 import useAxios from "../../hooks/useAxios";
 import { Col, Card, Button, Row } from 'react-bootstrap';
@@ -13,7 +14,9 @@ function Home() {
     const produtos = useAxios();
     return (
         <>
-
+            <Helmet>
+                <title>CTD Commerce | Home</title>
+            </Helmet>
 
             <div className="carrosel">
                 <Carousel>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import { Container, Row } from 'react-bootstrap';
 import UsersCard from "../../components/UsersCard";
 import Projeto from "./Projeto";
@@ -10,6 +11,9 @@ function SobreNos() {
 
 	return (
 		<>
+			<Helmet>
+				<title>CTD Commerce | SOBRE NÓS</title>
+			</Helmet>
 			<Projeto />
 			<Equipe />
 			<Container className="container">
