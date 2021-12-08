@@ -7,12 +7,12 @@
         case 'REMOVE':
             let estadoAtual = [...state]
             const indice = state.findIndex(
-                (item) => item.id === action.id
+                (item) => item.id === action.payload.id
             )
 
             if(indice >= 0 ){
                 estadoAtual.splice(indice, 1)
-                 return [...state, estadoAtual]
+                 return estadoAtual
             }else{
                return state
             }    
