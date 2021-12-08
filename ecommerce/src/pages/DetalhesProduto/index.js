@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet";
 import "./style.scss";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import {CarrinhoContext} from '../../contexts/Carrinho';
-import {useContext} from 'react';
+import {useContext, useState} from 'react';
 
 import useAxios from "../../hooks/useAxios";
 
@@ -11,7 +11,13 @@ const DetalhesProduto = () => {
     const id = useParams();
     const detalhes = useAxios(`/${id.id}`);
     const { adicionarCarrinho} = useContext(CarrinhoContext);
-
+    
+    const [quantidade, setQuantidade] = useState(1)
+    
+    const handleAdicionarCarrinho = (produto)=>{
+        produto.quantidade = quantidade
+        adicionarCarrinho(produto)
+    }
     
     return (
         <>
@@ -26,7 +32,7 @@ const DetalhesProduto = () => {
                             <Card.Body>
                                 <Card.Title className="display-4" title={detalhes.titulo}>{detalhes.titulo}</Card.Title>
                                 <Card.Title className="display-6">R$ {detalhes.preco}</Card.Title>
-                                <Button variant="secondary" onClick={()=>{adicionarCarrinho(detalhes)}} >Adicionar ao carrinho</Button>
+                                <Button variant="secondary" onClick={()=>{handleAdicionarCarrinho(detalhes)}} >Adicionar ao carrinho</Button>
                             </Card.Body>
                         </Col>
                     </Row>

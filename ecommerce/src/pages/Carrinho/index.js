@@ -7,24 +7,26 @@ const Carrinho = () => {
     const { produtosCarrinho, adicionarCarrinho, removerDoCarrinho } = useContext(CarrinhoContext);
     let todosOsProdutos = [...produtosCarrinho]
 
-    // const salvarProdutos = new Map();
-    // let produtosUnicos = [];
-    // todosOsProdutos.forEach((produto) => {
-    //     if (!salvarProdutos.has(produto.id)) {
-    //         salvarProdutos.set(produto.id, produto);
-    //     }
-    // });
 
-    // for (const value of salvarProdutos.values()) {
-    //     produtosUnicos.push(value)
-    // }
+    const salvarProdutos = new Map();
+    let produtosUnicos = [];
+    todosOsProdutos.forEach((produto) => {
+        if (!salvarProdutos.has(produto.id)) {
+            salvarProdutos.set(produto.id, produto);
+        }
+    });
+
+    for (const value of salvarProdutos.values()) {
+        produtosUnicos.push(value)
+    }
 
     console.log(todosOsProdutos)
+    console.log(produtosUnicos)
     return (
         <>
             <ListGroup>
-                {todosOsProdutos.length !== 0 && (
-                    todosOsProdutos.map((produto) => (
+                {produtosUnicos.length !== 0 && (
+                    produtosUnicos.map((produto) => (
                         <ListGroup.Item key={produto.id} >
                             <Container>
                                 <Card className="flex-row">
