@@ -10,7 +10,6 @@ const Header = () => {
 
         <Container className="container">
           <Link to="/" className="navbar-brand">E-commerce</Link>
-          {/*  <Navbar.Brand href="/">Ecommerce</Navbar.Brand> */}
 
 
           <Navbar.Toggle aria-controls='responsive-navbar-nav' className="justify-content-end " style={{ textAlign: "center" }} />
@@ -21,13 +20,13 @@ const Header = () => {
                 <Link to='/home' style={{ textDecoration: 'none', color: 'white' }}>Home</Link>
               </Nav.Link>
               <Nav.Link>
-                <Link to='/produto' style={{ textDecoration: 'none', color: 'white' }}>Produtos</Link>
+                <Link to='/produtos' style={{ textDecoration: 'none', color: 'white' }}>Produtos</Link>
               </Nav.Link>
               <Nav.Link>
                 <Link to='/sobrenos' style={{ textDecoration: 'none', color: 'white' }}>Sobre nós</Link>
               </Nav.Link>
 
-              <Link to="/" className="d-right"><BsFillBasketFill className="carrinho"></BsFillBasketFill></Link>
+              <Link to="/carinho" className="d-right"><BsFillBasketFill className="carrinho"></BsFillBasketFill></Link>
 
             </Nav>
           </Navbar.Collapse>
