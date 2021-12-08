@@ -4,7 +4,6 @@
         case "ADD_TO_CART":
             return [...state,action.payload]
             
-            // return[...state,action.payload]
         case 'REMOVE':
             let estadoAtual = [...state]
             const indice = state.findIndex(

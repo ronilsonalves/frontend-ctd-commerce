@@ -5,8 +5,8 @@ export const CarrinhoContext = createContext();
 
 const CarrinhoContextProvider = ({children})=>{
     const [produtosCarrinho, dispatch] = useReducer(carrinhoReducer,[],() => {
-
-        const localData = localStorage.getItem('produtosNoCarrinho');
+    
+        const localData = localStorage.getItem('produtosCarrinho');
         return localData ? JSON.parse(localData):[];
     });
 
@@ -15,7 +15,7 @@ const CarrinhoContextProvider = ({children})=>{
     const removerDoCarrinho = (produto) => dispatch({type: 'REMOVE', payload: produto});
 
     useEffect(()=>{
-        localStorage.setItem('produtosNoCarrinho', JSON.stringify(produtosCarrinho))
+        localStorage.setItem('produtosCarrinho', JSON.stringify(produtosCarrinho))
     }, [produtosCarrinho]);
 
     return(
