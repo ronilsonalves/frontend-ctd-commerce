@@ -1,18 +1,15 @@
 import React from "react";
+import './Header.scss';
 import { Container, Navbar, Nav } from 'react-bootstrap';
 import { BsFillBasketFill } from 'react-icons/bs';
 import { Link } from "react-router-dom";
-import logo from '../img/logo.png';
-import './Header.scss';
 const Header = () => {
   return (
     <>
       <Navbar collapseOnSelect fixed="top" bg="dark" variant="dark" expand="sm" >
 
         <Container className="container">
-        <Navbar.Brand to="/" className="navbar-brand">
-            <img src={logo} alt="logo" className="logo" />
-          </Navbar.Brand>
+          <Link to="/" className="navbar-brand">E-commerce</Link>
 
 
           <Navbar.Toggle aria-controls='responsive-navbar-nav' className="justify-content-end " style={{ textAlign: "center" }} />
