@@ -13,13 +13,15 @@ const CarrinhoContextProvider = ({children})=>{
     const adicionarCarrinho = (produto) => dispatch({type: 'ADD_TO_CART', payload: produto});
     
     const removerDoCarrinho = (produto) => dispatch({type: 'REMOVE', payload: produto});
+   
+    const clearAll = () => dispatch({type: 'CLEAR'});
 
     useEffect(()=>{
         localStorage.setItem('produtosCarrinho', JSON.stringify(produtosCarrinho))
     }, [produtosCarrinho]);
 
     return(
-        <CarrinhoContext.Provider value={{produtosCarrinho, adicionarCarrinho,removerDoCarrinho}}>
+        <CarrinhoContext.Provider value={{produtosCarrinho, adicionarCarrinho,removerDoCarrinho, clearAll}}>
             {children}
         </CarrinhoContext.Provider>    
     )

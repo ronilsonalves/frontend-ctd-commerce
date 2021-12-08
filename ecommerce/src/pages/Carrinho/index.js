@@ -1,36 +1,39 @@
-
+import { Helmet } from "react-helmet";
 import { CarrinhoContext } from '../../contexts/Carrinho';
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import { Container, ListGroup, Card, Button } from 'react-bootstrap';
-import { Formik, Field, Form } from 'formik';
 
 
 const Carrinho = () => {
-    const { produtosCarrinho, adicionarCarrinho, removerDoCarrinho } = useContext(CarrinhoContext);
+    const { produtosCarrinho, adicionarCarrinho, removerDoCarrinho, clearAll } = useContext(CarrinhoContext);
     let todosOsProdutos = [...produtosCarrinho]
 
-    const [quantidade, setQuantidade] = useState(1)
-
-    const handleAdicionarCarrinho = (produto) => {
-        produto.quantidade = quantidade
+    function incrementar(produto) {
+        produto.quantidade++
         adicionarCarrinho(produto)
     }
-    
-    // function atualizar (values,produto){
-        //     console.log(produto)
-        //     setQuantidade(values.qtd)
-        //     handleAdicionarCarrinho(produto)
-        // }
-        
-    let valorTotal= 0
+
+    function decrementar(produto) {
+        produto.quantidade--
+        if (produto.quantidade <= 0) {
+            removerDoCarrinho(produto)
+        } else {
+            adicionarCarrinho(produto)
+        }
+    }
+
+    let valorTotal = 0
     return (
         <>
+            <Helmet><title>CTD Commerce | Carrinho</title></Helmet>
+
+
             <ListGroup>
                 {todosOsProdutos.length !== 0 && (
                     todosOsProdutos.map((produto) => (
                         <ListGroup.Item key={produto.id} >
                             <Container>
-                                <Card className="flex-row">
+                                <Card className="flex-row my-5">
                                     <Card.Img style={{ width: '100px' }} className="my-50px" src={produto.image} />
                                     <Card.Body className="card-body">
                                         <Card.Title >{produto.titulo}</Card.Title>
@@ -40,13 +43,19 @@ const Carrinho = () => {
                                         <Button variant="primary" onClick={() => { removerDoCarrinho(produto) }}
                                         >Remover do carrinho</Button>
                                     </Card.Body>
+                                    <Button variant="primary" className="mx-2" onClick={() => { incrementar(produto) }}
+                                    >+</Button>
+                                    <Card.Title className="display-3 text-center">{produto.quantidade}</Card.Title>
+                                    <Button variant="primary" className="mx-2" onClick={() => { decrementar(produto) }}
+                                    >-</Button>
                                     <Card.Title>R${produto.preco} </Card.Title>
                                 </Card>
                             </Container>
-                            <p style={{display:'none'}}>{valorTotal = valorTotal + (produto.quantidade * produto.preco)}</p>
+                            <p style={{ display: 'none' }}>{valorTotal = valorTotal + (produto.quantidade * produto.preco)}</p>
                         </ListGroup.Item>
                     ))
                 )}
+                <Button variant="primary" className="mx-2" onClick={() => { clearAll() }} >Limpar carrinho</Button>
                 <ListGroup.Item>R${valorTotal}</ListGroup.Item>
             </ListGroup>
         </>

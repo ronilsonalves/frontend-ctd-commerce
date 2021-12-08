@@ -30,6 +30,8 @@ const carrinhoReducer = (state, action) => {
                 return state
             }
 
+        case 'CLEAR':
+                return state = [];
         default:
             return state;
     }
