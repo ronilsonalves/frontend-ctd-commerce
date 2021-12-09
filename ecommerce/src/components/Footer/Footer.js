@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom'
 const Footer = () => {
   return (
     <>
-      <Navbar bg="dark" variant="dark">
+      <Navbar bg="dark" variant="dark" fixed="bottom">
         <Container className="justify-content-center">
           <Link to="/" className="navbar-brand">E-COMMERCE</Link>
           <Nav className="justify-content-center">

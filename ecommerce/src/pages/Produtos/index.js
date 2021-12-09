@@ -21,7 +21,7 @@ const Produtos = () => {
             <Helmet>
                 <title>CTD Commerce | Todos os produtos</title>
             </Helmet>
-            <section id="produtos">
+            <section id="produtos" className="mb-auto">
             <SearchBox /> {/* SearchBox */}
             <Container className="container-nav">
                 <Navbar variant="dark" bg="dark" expand="lg">
@@ -62,7 +62,7 @@ const Produtos = () => {
                                             <Card.Text style={{ height: '6.50rem' }} title={produto.descricao} className="card-text">
                                                 {produto.descricao >= 77 ? produto.descricao : produto.descricao.substring(0, 76) + "..."}
                                             </Card.Text>
-                                            <Button variant="primary" >Ver detalhes</Button>
+                                            <Link to={`/produto/${produto.id}`}> <Button variant="primary" >Ver detalhes</Button></Link>
                                         </Card.Body>
                                     </Card>
                                 </Col>

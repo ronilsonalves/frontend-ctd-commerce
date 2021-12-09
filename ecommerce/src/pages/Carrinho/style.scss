@@ -1,0 +1,55 @@
+.container-carrinho{
+    margin-top: 3rem;
+
+    .btn-inc:hover, .btn-dec:hover{
+        background-color: black;
+        color: white;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .card {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      text-align: center !important;
+
+        #card-preco{
+            margin: 10px !important;
+            font-size: 42px !important;
+        }
+
+            .card-text{
+                font-size: 20px;
+            }
+
+            img{
+                min-width: 50vw;
+                margin-top: 18px;
+            }
+
+            #btn-remover-carrinho{
+                background-color: #f0c14b;
+                border: 1px solid;
+                border-color: #a88734 #9c7e31 #846a29;
+                color: black;
+                margin-bottom: 18px;
+            }
+
+            .btn-inc{
+                border: 1px solid;
+                border-color: #a88734 #9c7e31 #846a29;
+            }
+
+            .btn-dec{
+                border: 1px solid;
+                border-color: #a88734 #9c7e31 #846a29;
+            }
+
+            .qtd-row{
+                align-items: center !important;
+                text-align: center !important;
+            }
+    }
+  }
+  

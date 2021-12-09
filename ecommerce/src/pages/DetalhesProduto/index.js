@@ -1,4 +1,4 @@
-import { useParams } from "react-router";
+import { useParams, useNavigate } from "react-router";
 import { Helmet } from "react-helmet";
 import "./style.scss";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
@@ -8,6 +8,7 @@ import {useContext, useState} from 'react';
 import useAxios from "../../hooks/useAxios";
 
 const DetalhesProduto = () => {
+    let carrinho = useNavigate();
     const id = useParams();
     const detalhes = useAxios(`/${id.id}`);
     const { adicionarCarrinho} = useContext(CarrinhoContext);
@@ -17,6 +18,7 @@ const DetalhesProduto = () => {
     const handleAdicionarCarrinho = (produto)=>{
         produto.quantidade = quantidade
         adicionarCarrinho(produto)
+        setTimeout(() => { carrinho('/carrinho') }, 500);
     }
     
     return (
