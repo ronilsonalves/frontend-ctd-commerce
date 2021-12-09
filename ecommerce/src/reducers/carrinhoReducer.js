@@ -1,21 +1,24 @@
 const carrinhoReducer = (state, action) => {
 
     switch (action.type) {
-        case "ADD_TO_CART":
-            if (action.payload !== null && state.length > 0) {
-                const newArray = [];
-                state.forEach((produto) => {
-                    if (action.payload.id !== produto.id) {
-                        newArray.push(produto)
-                    }
-                })
-                newArray.push(action.payload)
-                return newArray
+        case 'ADD_TO_CART':
+            const jaExiste = state.filter(produto => (
+                produto.id === action.payload.id
+            ));
 
-            } else if (state.length === 0) {
-                return [...state, action.payload]
+            if (!jaExiste.length) {
+                return [...state, action.payload];
+            } else {
+                console.log(action.payload.quantidade)
+                const novoEstado = state.map((produto) => {
+                    if (produto.id === action.payload.id) {
+                        produto.quantidade = action.payload.quantidade
+                    }
+                    return produto
+                })
+
+                return novoEstado;
             }
-            return state
 
         case 'REMOVE':
             let estadoAtual = [...state]
