@@ -33,7 +33,7 @@ const Carrinho = () => {
             <Container className="mt-5">
                 <SearchBox />
             </Container>
-
+            <section id="carrinho-cart">
             <Container className="container-carrinho">
                 <ListGroup>
                     {todosOsProdutos.length !== 0 && (
@@ -75,6 +75,7 @@ const Carrinho = () => {
                     <ListGroup.Item className="display-6">Total : R$ {valorTotal.toFixed(2)}</ListGroup.Item>
                 </ListGroup>
             </Container>
+            </section>
         </>
     )
 }
