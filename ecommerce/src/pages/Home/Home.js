@@ -7,9 +7,6 @@ import Carousel from "react-bootstrap/Carousel";
 import { Link } from 'react-router-dom';
 
 
-
-
-
 function Home() {
     const produtos = useAxios();
     return (
@@ -25,7 +22,6 @@ function Home() {
                             <Carousel>
                                 <Carousel.Item>
                                     <img
-
                                         className="d-block w-100 home__image"
                                         src="https://res.cloudinary.com/dac23jyqr/image/upload/v1638486266/ecommerce/eletronicos_pw440b.jpg"
                                         alt="slide1"

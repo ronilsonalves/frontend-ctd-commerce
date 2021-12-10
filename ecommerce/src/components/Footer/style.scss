@@ -1,0 +1,19 @@
+#rodape {
+    background-color: rgb(0, 0, 0);
+    .d-flex {
+        background-color: #023e;
+    }
+    .d-flex a{
+        margin: 1em;
+    }
+    .text-white a{
+        text-decoration: none;
+    }
+    .bi {
+        font-size: 1.3rem;
+        color: white;
+    }
+    .bi bi-heart-fill {
+        background-color: white;
+    }
+}

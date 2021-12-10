@@ -1,43 +1,40 @@
 #card-git {
-margin-top: 1rem;
-margin-bottom: 2rem;
-text-align: center;
-align-items: center;
-border: none;
-background-color: #F6EABF;
-cursor: pointer;
-}
- 
-#git{
-border-radius: 100px;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    align-items: center;
+    border: none;
+    background-color: #f6eabf;
+    cursor: pointer;
+
+    #git {
+        border-radius: 100px;
+    }
+    .group-icon {
+        margin: 0.75rem;
+        a {
+            text-decoration: none;
+            color: black;
+        }
+    }
 }
 
-.banner-sobrenos{
-width: 100%;
-mask-image: linear-gradient( rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-z-index: -2;
+.banner-sobrenos {
+    width: 100%;
+    mask-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    z-index: -2;
 }
 
 #titulo {
-display: flex;
-justify-content: center;
-text-transform: uppercase;
-color:black;
-font-size: 2.0rem;
-border-bottom: 2px solid black ;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    color: black;
+    font-size: 2rem;
+    border-bottom: 2px solid black;
 }
 
 #texto {
-font-size: 1.3rem;
-padding-bottom: 5rem;
+    font-size: 1.3rem;
+    padding-bottom: 5rem;
 }
-   
-
-
-   
-    
-  
-
-    
-
-

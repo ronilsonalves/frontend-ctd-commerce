@@ -12,7 +12,7 @@ function SobreNos() {
 	return (
 		<>
 			<Helmet>
-				<title>CTD Commerce | SOBRE NÓS</title>
+				<title>CTD Commerce | Sobre nós</title>
 			</Helmet>
 			<Projeto />
 			<Equipe />
@@ -21,35 +21,12 @@ function SobreNos() {
 
 					{users.length !== 0 && (
 						users.map((usuario) => (
-							<UsersCard integrante={usuario} />
+							<UsersCard integrante={usuario} key={usuario.id} />
 						))
 					)}
 				</Row>
 			</Container>
 
-
-
-
-
-
-			{/*   {users.map(users => {
-				return (
-					<div className="card text-center">
-
-						<div className="overflow">
-							<img className="fotogit" src={users.avatar_url} alt="git foto" />
-						</div>
-						< div className="card-body text-dark">
-							<h4 className="card-title">{users.name}</h4>
-							<p className="card-text text-secondary ">{users.description}</p>
-							<a href={users.html_url} className="btn btn-outline-success" target="_blank" rel="noreferrer">Saiba mais</a>
-							
-							
-						</div>
-					</div>
-
-				)
-			})} */}
 		</>
 
 	)

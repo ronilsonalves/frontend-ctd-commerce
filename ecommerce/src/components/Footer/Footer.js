@@ -1,8 +1,6 @@
 import React from "react";
-import { Container, Navbar, Nav } from 'react-bootstrap';
-import { BsGithub, BsLinkedin, BsTwitter } from 'react-icons/bs';
-import { Link } from 'react-router-dom'
-
+import './style.scss';
+import RodapeLogo from "../../img/logo-svg.svg"
 
 
 <p className="d-flex">&copy; 2021 </p>
@@ -10,31 +8,19 @@ import { Link } from 'react-router-dom'
 const Footer = () => {
   return (
     <>
-      <Navbar bg="dark" variant="dark">
-        <Container className="justify-content-center">
-          <Link to="/" className="navbar-brand">E-COMMERCE</Link>
-          <Nav className="justify-content-center">
 
-
-
-            <Link to="/" className="nav-link">Siga as nossas redes sociais</Link>
-            <Link to="/" className="nav-link"><BsGithub className="icon-footer" /></Link>
-            <Link to="/" className="nav-link"><BsLinkedin className="icon-footer" /></Link>
-            <Link to="/" className="nav-link"><BsTwitter className="icon-footer" /></Link>
-
-          </Nav>
-        </Container>
-      </Navbar>
+      <footer id="rodape" className="text-center text-lg-start">
+        <div className="text-center text-white p-3">
+          <img src={RodapeLogo} alt="CTD ECommerce Logo"></img>
+          <p>Copyright ©2021 - <a className="text-white" href="/">CTD ECommerce</a>. Todos os direitos reservados.</p>
+          Desenvolvido em React pelo Grupo 4 da Turma 4.
+        </div>
+      </footer>
 
     </>
 
   );
 };
-
-
-
-
-
 
 export default Footer;
 

@@ -1,16 +1,18 @@
 import React from "react";
-import './Header.scss';
 import { Container, Navbar, Nav } from 'react-bootstrap';
 import { BsFillBasketFill } from 'react-icons/bs';
 import { Link } from "react-router-dom";
+import './Header.scss';
+import Logo from '../../img/logo-svg.svg'
+
+
 const Header = () => {
   return (
     <>
       <Navbar collapseOnSelect bg="dark" variant="dark" expand="sm">
 
         <Container className="container">
-          <Link to="/" className="navbar-brand">E-commerce</Link>
-
+          <Link to="/" className="navbar-brand"><img src={Logo} alt="CTD eCommerce Logo"></img> </Link>
 
           <Navbar.Toggle aria-controls='responsive-navbar-nav' className="justify-content-end " style={{ textAlign: "center" }} />
           <Navbar.Collapse id='responsive-navbar-nav' className="justify-content-end" style={{ textAlign: "center" }} >
@@ -32,9 +34,6 @@ const Header = () => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-
-
-
     </>
 
   );

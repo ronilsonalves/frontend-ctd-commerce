@@ -44,8 +44,8 @@ const Carrinho = () => {
                                         <Card.Img style={{ width: '18vw' }} className="my-50px" src={produto.image} />
                                         <Card.Body className="card-body">
                                             <Card.Title className="card-title display-4">{produto.titulo}</Card.Title>
-                                            <Card.Text style={{ height: '6.50rem', fontSize: '18px'}} title={produto.descricao} className="card-text">
-                                                {produto.descricao >= 77 ? produto.descricao : produto.descricao.substring(0, 76) + "..."}
+                                            <Card.Text style={{ height: '6.50rem'}} title={produto.descricao} className="card-text">
+                                                {produto.descricao >= 50 ? produto.descricao : produto.descricao.substring(0, 49) + "..."}
                                             </Card.Text>
                                             <Card.Title id="card-preco" className="display-4">R${produto.preco} </Card.Title>
                                         </Card.Body>
@@ -63,8 +63,8 @@ const Carrinho = () => {
                                                 </Button>
                                             </Col>
                                         </Row>
-                                        <Button id="btn-remover-carrinho" variant="secondary" /* className="my-auto" */ onClick={() => { removerDoCarrinho(produto) }}
-                                        >Remover do carrinho</Button>
+                                        <Button id="btn-remover-carrinho" variant="secondary" className="btn-block" /* className="my-auto" */ onClick={() => { removerDoCarrinho(produto) }}
+                                        >Remover</Button>
                                     </Card>
                                 </Container>
                                 <p style={{ display: 'none' }}>{valorTotal = valorTotal + (produto.quantidade * produto.preco)}</p>

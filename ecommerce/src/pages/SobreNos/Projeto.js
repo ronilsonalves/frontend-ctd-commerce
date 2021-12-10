@@ -3,9 +3,9 @@ import React from "react";
 function Projeto() {
     return (
         <>
-            <img className="banner-sobrenos" style={{ height: '50vh'}} src="https://computerworld.com.br/wp-content/uploads/2019/12/as-habilidades-desenvolvedores-2020.jpg" alt="Banner pessoa digitando no computador"/>
+            <img className="banner-sobrenos" style={{ width: 'auto'}} src="https://computerworld.com.br/wp-content/uploads/2019/12/as-habilidades-desenvolvedores-2020.jpg" alt="Banner pessoa digitando no computador"/>
             <div className="d-flex justify-content-center" id="Descricao">
-                <div class="col-md-7">
+                <div className="col-md-7">
                     <h2 className="featurette-heading" id="titulo">Projeto</h2>
                     <p className="lead mx-3" id="texto">
                         Neste projeto desenvolvemos um e-commerce para fins avaliativo
@@ -17,7 +17,6 @@ function Projeto() {
                 </div>
             </div>
         </>
-
     )
 }
 
