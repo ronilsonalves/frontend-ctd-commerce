@@ -26,7 +26,7 @@ const Produtos = () => {
             <Container className="container-nav">
                 <Navbar variant="dark" bg="dark" expand="lg">
                     <Container fluid>
-                        <Navbar.Brand href="#home">Filtro por categorias</Navbar.Brand>
+                        <Navbar.Brand href="#home">Filtrar</Navbar.Brand>
                         <Navbar.Toggle aria-controls="navbar-dark-example " className="justify-content-end" />
                         <Navbar.Collapse id="navbar-dark-example" className="justify-content-end">
                             <Nav>
