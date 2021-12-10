@@ -3,7 +3,6 @@ import React from "react";
 function Projeto() {
     return (
         <>
-            <img className="banner-sobrenos" style={{ width: 'auto'}} src="https://computerworld.com.br/wp-content/uploads/2019/12/as-habilidades-desenvolvedores-2020.jpg" alt="Banner pessoa digitando no computador"/>
             <div className="d-flex justify-content-center" id="Descricao">
                 <div className="col-md-7">
                     <h2 className="featurette-heading" id="titulo">Projeto</h2>
