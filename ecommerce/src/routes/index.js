@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
-/* Importem as páginas abaixo */
 import Produtos from '../pages/Produtos';
 import DetalhesProduto from '../pages/DetalhesProduto';
 import ProdutosPorCategoria from '../pages/ProdutosPorCategoria';
@@ -10,6 +9,7 @@ import SobreNos from '../pages/SobreNos/SobreNos';
 import Footer from '../components/Footer/Footer';
 import CarrinhoContextProvider from '../contexts/Carrinho';
 import Carrinho from '../pages/Carrinho/index';
+import NotFound from '../pages/NotFound/'
 const RouteList = () => (
     <BrowserRouter>
     <CarrinhoContextProvider>
@@ -22,6 +22,7 @@ const RouteList = () => (
             <Route path="/busca/:byname" element={<SearchResults />} />
             <Route path="/sobrenos" element={<SobreNos />} />
             <Route path="/carrinho" element={<Carrinho />} />
+            <Route path='*' element={<NotFound/>} />
         </Routes>
         <Footer />
         </CarrinhoContextProvider>

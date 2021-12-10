@@ -58,10 +58,11 @@ const Produtos = () => {
                                             <Card.Img variant="top" src={produto.image} />
                                         </Link>
                                         <Card.Body className="card-body">
-                                            <Card.Title >{produto.titulo}</Card.Title>
+                                            <Card.Title id="card-titulo">{produto.titulo}</Card.Title>
                                             <Card.Text style={{ height: '6.50rem' }} title={produto.descricao} className="card-text">
                                                 {produto.descricao >= 77 ? produto.descricao : produto.descricao.substring(0, 76) + "..."}
                                             </Card.Text>
+                                            <Card.Title id="card-preco">R${produto.preco} </Card.Title>
                                             <Link to={`/produto/${produto.id}`}> <Button variant="primary" >Ver detalhes</Button></Link>
                                         </Card.Body>
                                     </Card>

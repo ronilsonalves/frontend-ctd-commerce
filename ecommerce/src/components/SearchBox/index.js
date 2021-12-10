@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router";
 import { Formik, Form, Field } from "formik";
-import { InputGroup, Button, Container, FloatingLabel } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 
 const SearchBox = () => {
     let paginaDePesquisa = useNavigate();

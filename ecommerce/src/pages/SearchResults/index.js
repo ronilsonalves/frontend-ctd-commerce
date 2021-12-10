@@ -16,7 +16,7 @@ const SearchResults = () => {
     return (
         <>
             <Helmet title={`CTD Commerce | ${resultadoPesquisa.length !== 0 ? 'Busca por ' + byName.byname : 'Não foram encontrados produtos'}`}></Helmet>
-            <section id="produtos">
+            <section id="produtos" className="mt-5">
                 <SearchBox />
                 <h3 className="display-5 text-center my-3 py-3">Confira o resultado da sua pesquisa</h3>
                 {resultadoPesquisa.length !== 0 ? <Container className="container">
@@ -34,7 +34,8 @@ const SearchResults = () => {
                                             <Card.Text style={{ height: '6.50rem' }} title={produto.descricao} className="card-text">
                                                 {produto.descricao <= 77 ? produto.descricao : produto.descricao.substring(0, 76) + "..."}
                                             </Card.Text>
-                                            <Button variant="primary" >Ver detalhes</Button>
+                                            <Card.Title id="card-preco">R${produto.preco} </Card.Title>
+                                            <Link to={`/produto/${produto.id}`}> <Button variant="primary" >Ver detalhes</Button></Link>
                                         </Card.Body>
                                     </Card>
                                 </Col>

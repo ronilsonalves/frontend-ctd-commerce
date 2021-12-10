@@ -43,7 +43,7 @@ const Carrinho = () => {
                                     <Card className="flex-row my-5">
                                         <Card.Img style={{ width: '18vw' }} className="my-50px" src={produto.image} />
                                         <Card.Body className="card-body">
-                                            <Card.Title className="display-4">{produto.titulo}</Card.Title>
+                                            <Card.Title className="card-title display-4">{produto.titulo}</Card.Title>
                                             <Card.Text style={{ height: '6.50rem', width: '18rem', fontSize: '18px'}} title={produto.descricao} className="card-text">
                                                 {produto.descricao >= 77 ? produto.descricao : produto.descricao.substring(0, 76) + "..."}
                                             </Card.Text>

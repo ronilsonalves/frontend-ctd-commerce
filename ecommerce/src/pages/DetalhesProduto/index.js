@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useParams, useNavigate } from "react-router";
 import { Helmet } from "react-helmet";
 import "./style.scss";

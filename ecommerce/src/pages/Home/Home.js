@@ -50,13 +50,12 @@ function Home() {
                         </div>
 
                         <div className="categorias">
-                            <h2>Eletrônicos</h2>
 
                             <section className="carrosel">
                                 {produtos.length !== 0 && (
 
-                                    produtos.map((produto) => (
-                                        <Col key={produto.id} className="col mx-auto " >
+                                    produtos.map((produto, index) => (
+                                        <Col key={produto.id} className={`mx-auto ${index === 1 ? "d-none d-sm-block" : index === 2 ? "d-none d-md-block" : ""}`} >
                                             <Card className="card-container ">
                                                 <Link to={`/produto/${produto.id}`}>
                                                     <Card.Img variant="top" src={produto.image} />
@@ -66,26 +65,28 @@ function Home() {
                                                     <Card.Text style={{ height: '6.50rem' }} title={produto.descricao} className="card-text">
                                                         {produto.descricao >= 77 ? produto.descricao : produto.descricao.substring(0, 76) + "..."}
                                                     </Card.Text>
+                                                    <Card.Title id="card-preco" className="display-6">R${produto.preco} </Card.Title>
                                                     <Link to={`/produto/${produto.id}`}>
                                                         <Button variant="primary" >Ver mais</Button>
                                                     </Link>
                                                 </Card.Body>
                                             </Card>
                                         </Col>
-                                    )).slice(3, 6)
+                                    )).slice(0, 3)
                                 )
                                 }
                             </section>
                         </div>
 
-                        <div className="home__row">
+                        <div>
+                            <h2 className="text-center">Mais Vendidos</h2>
                             <Carousel>
                                 <Carousel.Item>
                                     <section className="carrosel">
                                         {produtos.length !== 0 && (
 
-                                            produtos.map((produto) => (
-                                                <Col key={produto.id} className="col mx-auto " >
+                                            produtos.map((produto, index) => (
+                                                <Col key={produto.id} className={`mx-auto ${index === 7 ? "d-none d-sm-block" : index === 8 ? "d-none d-md-block" : ""}`} >
                                                     <Card className="card-container ">
                                                         <Link to={`/produto/${produto.id}`}>
                                                             <Card.Img variant="top" src={produto.image} />
@@ -95,6 +96,37 @@ function Home() {
                                                             <Card.Text style={{ height: '6.50rem' }} title={produto.descricao} className="card-text">
                                                                 {produto.descricao >= 77 ? produto.descricao : produto.descricao.substring(0, 76) + "..."}
                                                             </Card.Text>
+                                                            <Card.Title id="card-preco" className="display-6">R${produto.preco} </Card.Title>
+                                                            <Link to={`/produto/${produto.id}`}>
+                                                                <Button variant="primary" >Ver mais</Button>
+                                                            </Link>
+                                                        </Card.Body>
+                                                    </Card>
+                                                </Col>
+                                            )).slice(6, 9)
+                                        )
+
+
+
+                                        }
+                                    </section>
+                                </Carousel.Item>
+                                <Carousel.Item>
+                                    <section className="carrosel">
+                                        {produtos.length !== 0 && (
+
+                                            produtos.map((produto, index) => (
+                                                <Col key={produto.id} className={`mx-auto ${index === 4 ? "d-none d-sm-block" : index === 5 ? "d-none d-md-block" : ""}`} >
+                                                    <Card className="card-container ">
+                                                        <Link to={`/produto/${produto.id}`}>
+                                                            <Card.Img variant="top" src={produto.image} />
+                                                        </Link>
+                                                        <Card.Body className="card-body">
+                                                            <Card.Title >{produto.titulo}</Card.Title>
+                                                            <Card.Text style={{ height: '6.50rem' }} title={produto.descricao} className="card-text">
+                                                                {produto.descricao >= 77 ? produto.descricao : produto.descricao.substring(0, 76) + "..."}
+                                                            </Card.Text>
+                                                            <Card.Title id="card-preco" className="display-6">R${produto.preco} </Card.Title>
                                                             <Link to={`/produto/${produto.id}`}>
                                                                 <Button variant="primary" >Ver mais</Button>
                                                             </Link>
@@ -109,73 +141,12 @@ function Home() {
                                         }
                                     </section>
                                 </Carousel.Item>
-                                <Carousel.Item>
-                                    <section className="carrosel">
-                                        {produtos.length !== 0 && (
-
-                                            produtos.map((produto) => (
-                                                <Col key={produto.id} className="col mx-auto " >
-                                                    <Card className="card-container ">
-                                                        <Link to={`/produto/${produto.id}`}>
-                                                            <Card.Img variant="top" src={produto.image} />
-                                                        </Link>
-                                                        <Card.Body className="card-body">
-                                                            <Card.Title >{produto.titulo}</Card.Title>
-                                                            <Card.Text style={{ height: '6.50rem' }} title={produto.descricao} className="card-text">
-                                                                {produto.descricao >= 77 ? produto.descricao : produto.descricao.substring(0, 76) + "..."}
-
-                                                            </Card.Text>
-                                                            <Link to={`/produto/${produto.id}`}>
-                                                                <Button variant="primary" >Ver mais</Button>
-                                                            </Link>
-                                                        </Card.Body>
-                                                    </Card>
-                                                </Col>
-                                            )).slice(0, 3)
-                                        )
-
-
-
-                                        }
-                                    </section>
-                                </Carousel.Item>
 
                             </Carousel>
 
 
 
                         </div>
-
-                        <div className="categorias">
-                            <h2>Eletrodomésticos</h2>
-
-                        </div>
-
-                        <div className="home__row">
-
-
-                        </div>
-                        <div className="categorias">
-                            <h2>Mais Vendidos</h2>
-                        </div>
-
-
-                        <Carousel>
-                            <Carousel.Item>
-                                <section>
-                                    <section className="carrosel">
-
-                                    </section>
-                                </section>
-                            </Carousel.Item>
-                            <Carousel.Item>
-                                <section className="carrosel">
-
-                                </section>
-
-                            </Carousel.Item>
-
-                        </Carousel>
                     </div>
                 </div>
 

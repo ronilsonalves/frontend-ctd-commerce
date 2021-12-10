@@ -75,6 +75,7 @@ const ProdutosPorCategoria = () => {
                                             <Card.Text style={{ height: '6.50rem' }} title={produto.produtos[0].descricao} className="card-text">
                                                 {produto.produtos[0].descricao >= 77 ? produto.produtos[0].descricao : produto.produtos[0].descricao.substring(0, 76) + "..."}
                                             </Card.Text>
+                                            <Card.Title id="card-preco">R${produto.produtos[0].preco} </Card.Title>
                                             <Link to={`/produto/${produto.produtos[0].id}`}><Button variant="primary" >Ver detalhes</Button></Link>
                                         </Card.Body>
                                     </Card>
