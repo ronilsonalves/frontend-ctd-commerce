@@ -29,7 +29,7 @@ const DetalhesProduto = () => {
             <section id="product-card">
                 {detalhes !== null ? < Container >
                     <Row>
-                        <Col sm={6}>
+                        <Col sm={6} className="text-center">
                             <Card.Img variant="top" src={detalhes.image} alt={detalhes.titulo} title={detalhes.titulo} />
                         </Col><Col sm={6}>
                             <Card.Body>

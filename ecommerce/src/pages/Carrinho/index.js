@@ -44,12 +44,12 @@ const Carrinho = () => {
                                         <Card.Img style={{ width: '18vw' }} className="my-50px" src={produto.image} />
                                         <Card.Body className="card-body">
                                             <Card.Title className="card-title display-4">{produto.titulo}</Card.Title>
-                                            <Card.Text style={{ height: '6.50rem', width: '18rem', fontSize: '18px'}} title={produto.descricao} className="card-text">
+                                            <Card.Text style={{ height: '6.50rem', fontSize: '18px'}} title={produto.descricao} className="card-text">
                                                 {produto.descricao >= 77 ? produto.descricao : produto.descricao.substring(0, 76) + "..."}
                                             </Card.Text>
                                             <Card.Title id="card-preco" className="display-4">R${produto.preco} </Card.Title>
                                         </Card.Body>
-                                        <Row className="qtd-row my-auto">
+                                        <Row className="qtd-row my-auto" id="btns-add-rem">
                                             <Col>
                                                 <Button variant="" className="btn-dec" onClick={() => { decrementar(produto) }}
                                                 ><AiOutlineMinus /></Button>
@@ -63,7 +63,7 @@ const Carrinho = () => {
                                                 </Button>
                                             </Col>
                                         </Row>
-                                        <Button id="btn-remover-carrinho" variant="secondary" className="my-auto" style={{ height: '6vh' }} onClick={() => { removerDoCarrinho(produto) }}
+                                        <Button id="btn-remover-carrinho" variant="secondary" /* className="my-auto" */ onClick={() => { removerDoCarrinho(produto) }}
                                         >Remover do carrinho</Button>
                                     </Card>
                                 </Container>
@@ -71,7 +71,7 @@ const Carrinho = () => {
                             </ListGroup.Item>
                         ))
                     )}
-                    <Button variant="secondary" className="mx-2" onClick={() => { clearAll() }} >Limpar carrinho</Button>
+                    <Button variant="secondary" className="m-2" onClick={() => { clearAll() }} >Limpar carrinho</Button>
                     <ListGroup.Item className="display-6">Total : R$ {valorTotal.toFixed(2)}</ListGroup.Item>
                 </ListGroup>
             </Container>

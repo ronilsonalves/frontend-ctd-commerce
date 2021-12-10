@@ -1,65 +1,62 @@
-#root{
-
-    
-    #produtos{
-        background-color:#F6EABE;
+#root {
+    #produtos {
+        background-color: #f6eabe;
         display: flex;
         flex-direction: column;
 
-        .container-nav{
-            .dropdown-menu{
-                a{
+        .container-nav {
+            .dropdown-menu {
+                a {
                     text-decoration: none;
-                    color:white;
+                    color: white;
                 }
             }
         }
-        
-        .container{
+
+        .container {
             margin: 10px auto;
             padding: 10px auto;
             width: 80%;
-            
-            .col{
-                
+
+            .col {
                 max-width: 255px;
-                
-                .card-container{
-                    
+
+                .card-container {
                     text-align: center;
                     padding-top: 10px;
-                    
-                    .card-img-top{
-                        width: 150px;
+                    height: 70vh;
+
+                    .card-img-top {
+                        width: 80%;
                         max-height: 106px;
                     }
-                    
-                    .card-body{
+
+                    .card-body {
                         text-align: center;
-                            .btn-primary{
-                                background: #f0c14b;
-                                border: 1px solid;
-                                margin-top: 10px;
-                                border-color: #a88734 #9c7e31 #846a29;
-                                color: black;
-                            }
+                        .btn-primary {
+                            background: #f0c14b;
+                            border: 1px solid;
+                            margin-top: 10px;
+                            border-color: #a88734 #9c7e31 #846a29;
+                            color: black;
+                        }
                     }
                 }
             }
         }
-        
     }
 }
 
-.card-container:hover{
+.card-container:hover {
     transform: scale(1.1);
     transition: all 0.3s ease-in-out;
     box-shadow: 0 1px 1px 0 rgb(0 0 0 / 10%), 0 -1px 2px 0 rgb(0 0 0 / 10%);
 }
- 
+
 @media only screen and (max-width: 767px) {
-    .card-img-top{
-        max-width: 150px !important;
+    .card img {
+        min-width: auto;
+        /* min-width: 50vw; */
         margin-top: 18px;
     }
 }

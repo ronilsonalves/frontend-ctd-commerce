@@ -36,7 +36,7 @@
             }
 
             img{
-                // min-width: 50vw;
+                min-width: 50vw;
                 margin-top: 18px;
             }
 
@@ -45,6 +45,7 @@
                 border: 1px solid;
                 border-color: #a88734 #9c7e31 #846a29;
                 color: black;
+                margin-top: 12px;
                 margin-bottom: 18px;
             }
 
@@ -61,6 +62,7 @@
             .qtd-row{
                 align-items: center !important;
                 text-align: center !important;
+                flex-wrap: nowrap;
             }
     }
   }

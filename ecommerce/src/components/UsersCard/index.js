@@ -15,9 +15,12 @@ export default function UsersCard(user) {
                             <Card.Img variant="top" src={userData.avatar_url} id="git" />
                         </a>
                         <Card.Body>
-                            <Card.Title>{userData.login}</Card.Title>
+                            <Card.Title>{userData.name}</Card.Title>
                             <Card.Text>
-                                {userData.bio}
+                                {userData.blog}
+                            </Card.Text>
+                            <Card.Text>
+                                {userData.location}
                             </Card.Text>
                         </Card.Body>
 
